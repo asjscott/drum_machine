@@ -78,8 +78,10 @@ const DrumMachine = () => {
   return (
     <>
     <Navbar />
-    <div className='flex justify-center items-center h-screen bg-gray-400'>
-    <div className="block relative outline outline-4 outline-orange-600 text-center bg-slate-300" style={{width: "660px"}} id="drum-machine">
+    <div className='flex flex-col items-center h-screen bg-gray-400'>
+    <div className="relative pt-20 text-3xl font-special_elite"><span>Drum Machine</span></div>
+    <div className="flex justify-center items-center mt-20">
+    <div className="block relative outline outline-4 outline-orange-600 text-center bg-slate-300" id="drum-machine">
         <div className='inline-block m-5' style={{width:"332px", height:"272px"}} id="pad-bank">
             {drums.map((d) => {return <>
                 <div className="drum-pad relative float-left mt-2.5 mr-2.5 rounded-md pt-8 border-box cursor-pointer bg-gray-500 shadow-md shadow-black" id={d.id} style={{width: "100px", height: "80px"}} onClick={e => playSound(e)}>
@@ -93,6 +95,7 @@ const DrumMachine = () => {
         <div id="controls" className='inline-block mt-10 mr-5 ml-2.5 items-center align-top' style={{width: "240px", height: "272px"}}>
             <p className='flex flex-wrap justify-center content-center bg-gray-400 my-4 mx-auto p-4 border-box' id="display">{displayValue}</p>
         </div>
+    </div>
     </div>
     </div>
     </>
